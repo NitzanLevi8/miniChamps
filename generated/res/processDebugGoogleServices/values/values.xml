@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://minichamps-cee1c-default-rtdb.europe-west1.firebasedatabase.app</string>
+    <string name="gcm_defaultSenderId" translatable="false">698115947157</string>
+    <string name="google_api_key" translatable="false">AIzaSyDrG2GIywkT-cWKzrgIT_0xyutTW3RsNuE</string>
+    <string name="google_app_id" translatable="false">1:698115947157:android:8d5a85db7ce984d1e1f99c</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDrG2GIywkT-cWKzrgIT_0xyutTW3RsNuE</string>
+    <string name="google_storage_bucket" translatable="false">minichamps-cee1c.appspot.com</string>
+    <string name="project_id" translatable="false">minichamps-cee1c</string>
+</resources>
