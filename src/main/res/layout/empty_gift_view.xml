@@ -1,0 +1,94 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/rectangular_frame">
+
+    <RelativeLayout
+        android:id="@+id/emptyGiftView_RLO_gift"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/emptyGiftView_LYO_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true">
+
+            <!-- Delete gift -->
+            <ImageButton
+                android:id="@+id/emptyGiftView_BTN_deleteGift"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete_icon"
+                android:background="@color/white"
+                android:layout_marginEnd="15dp" />
+
+            <!-- Give gift  -->
+            <ImageButton
+                android:id="@+id/emptyGiftView_BTN_giveGift"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add_icon"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp" />
+        </LinearLayout>
+
+        <!-- Gift Icon -->
+        <ImageView
+            android:id="@+id/emptyGiftView_IMG_giftIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/gift_icon"
+            android:layout_toEndOf="@id/emptyGiftView_LYO_buttons"/>
+
+        <!-- Gift Details -->
+        <LinearLayout
+            android:id="@+id/emptyGiftView_LYO_giftDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/emptyGiftView_IMG_giftIcon"
+            android:layout_marginStart="16dp">
+
+            <!-- Gift Name -->
+            <TextView
+                android:id="@+id/emptyGiftView_TXT_giftName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+                android:text="Gift Name"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <!-- Gift Description -->
+            <TextView
+                android:id="@+id/emptyGiftView_TXT_giftDescription"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+                android:text="Gift Description"
+                android:textSize="14sp"/>
+
+            <!-- Gift Coins Value -->
+            <TextView
+                android:id="@+id/emptyGiftView_TXT_giftCoinsVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+
+                android:text="Coins: 0"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,104 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/empty_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="@drawable/rectangular_frame">
+
+    <RelativeLayout
+        android:id="@+id/emptyTaskView_RLO_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/emptyTaskView_LYO_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp"
+            android:layout_alignParentStart="true">
+
+            <!-- Delete task button -->
+            <ImageButton
+                android:id="@+id/emptyTaskView_BTN_deleteTask"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete_icon"
+                android:background="@color/white"
+                android:layout_marginEnd="15dp" />
+
+            <!-- Task is done button -->
+            <ImageButton
+                android:id="@+id/emptyTaskView_BTN_taskIsDone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/add_icon"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="15dp" />
+        </LinearLayout>
+
+        <!-- Task Icon -->
+        <ImageView
+            android:id="@+id/emptyTaskView_IMG_tasktIcon"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/task_icon"
+            android:layout_toEndOf="@id/emptyTaskView_LYO_buttons"/>
+
+        <!-- Task Details -->
+        <LinearLayout
+            android:id="@+id/emptyTaskView_LYO_taskDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@id/emptyTaskView_IMG_tasktIcon"
+            android:layout_marginStart="16dp">
+
+            <!-- Task Name -->
+            <TextView
+                android:id="@+id/emptyTaskView_TXT_taskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+                android:text="Task Name"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <!-- Task Description -->
+            <TextView
+                android:id="@+id/emptyTaskView_TXT_taskDescription"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+                android:text="Task Description"
+                android:textSize="14sp"/>
+
+            <!-- Task Coins Value -->
+            <TextView
+                android:id="@+id/emptyTaskView_TXT_taskCoinsVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+                android:text="Coins: 0"
+                android:textSize="14sp"/>
+
+            <!-- Child -->
+            <TextView
+                android:id="@+id/emptyTaskView_TXT_childName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dosis"
+                android:text="Child Name"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

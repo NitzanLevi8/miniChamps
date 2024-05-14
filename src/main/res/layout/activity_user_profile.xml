@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- User Profile Picture -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:id="@+id/userProfile_IMG_profileImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/default_profile"
+            android:background="@drawable/circle_frame"
+            android:scaleType="centerCrop" />
+    </FrameLayout>
+
+    <!-- ImageButton -->
+    <ImageButton
+        android:id="@+id/userProfile_BTN_setProfileImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/frameLayout"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/upload_image_icon"
+        android:background="@color/white"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Edit Name EditText -->
+    <EditText
+        android:id="@+id/userProfile_TXT_userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="text"
+        android:fontFamily="@font/dosis"
+        android:layout_below="@id/userProfile_BTN_setProfileImage"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Edit Email EditText -->
+    <EditText
+        android:id="@+id/userProfile_TXT_userEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Email"
+        android:fontFamily="@font/dosis"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/userProfile_TXT_userName"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Edit Phone EditText -->
+    <EditText
+        android:id="@+id/userProfile_TXT_userPhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:fontFamily="@font/dosis"
+        android:inputType="phone"
+        android:layout_below="@id/userProfile_TXT_userEmail"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Save Changes Button -->
+    <Button
+        android:id="@+id/userProfile_BTN_saveChanges"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:fontFamily="@font/dosis"
+        android:layout_below="@id/userProfile_TXT_userPhoneNumber"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Image at the bottom -->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/profile"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+    </ImageView>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<!-- activity_add_child.xml -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/setchild_background">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/setChild_TXT_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Children"
+        android:textSize="30sp"
+        android:fontFamily="@font/dosis"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <ImageView
+        android:id="@+id/setChild_IMG_profileImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/child_image"
+        android:layout_below="@id/setChild_TXT_title">
+    </ImageView>
+
+    <LinearLayout
+        android:id="@+id/setChild_LBL_addChild"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/white"
+        android:layout_below="@id/setChild_IMG_profileImageView"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/setChild_TXT_childName"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Name"
+            android:fontFamily="@font/dosis"
+            android:inputType="text"/>
+
+
+        <ImageButton
+            android:id="@+id/setChild_BTN_addChild"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/add_icon"
+            android:background="@color/white"/>
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/setChild_BTN_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setChild_LBL_addChild"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/home_icon"
+        android:background="@color/white"/>
+
+
+
+
+</RelativeLayout>

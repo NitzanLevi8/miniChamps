@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white">
+
+
+    <TextView
+        android:id="@+id/home_TXT_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="miniChamps"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:fontFamily="@font/ttw"
+        android:textSize="50sp">
+    </TextView>
+
+    <!-- User Details -->
+    <LinearLayout
+        android:id="@+id/home_LBL_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_TXT_title"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <!--User details-->
+        <LinearLayout
+            android:id="@+id/home_LBL_userDetails"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/circle_frame">
+
+                <ImageView
+                    android:id="@+id/home_IMG_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/default_profile">
+                </ImageView>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/home_TXT_heyUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/dosis"
+                android:text="Hey, Welcome Back!"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="10dp">
+            </TextView>
+
+        </LinearLayout>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/home_IMG_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mainimage"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/home_LBL_main">
+    </ImageView>
+
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@id/home_IMG_picture"
+        android:layout_above="@id/home_LBL_menu">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_RCLV_children"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:orientation="horizontal"
+            tools:listitem="@layout/empty_child_view" />
+
+    </HorizontalScrollView>
+
+    <!-- Menu -->
+    <LinearLayout
+        android:id="@+id/home_LBL_menu"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+
+        android:weightSum="5"
+        android:paddingBottom="20dp">
+
+        <!-- Edit Profile Button -->
+        <ImageButton
+            android:id="@+id/home_BTN_editProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/profile_icon"
+            android:background="@null"
+            android:padding="0dp" />
+
+        <!-- Add child Button -->
+        <ImageButton
+            android:id="@+id/home_BTN_children"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/add_child_icon"
+            android:background="@null"
+            android:padding="0dp" />
+
+        <!-- All Tasks Button -->
+        <ImageButton
+            android:id="@+id/home_BTN_tasks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/task_icon"
+            android:background="@null"
+            android:padding="0dp" />
+
+        <!-- Gift Store Button -->
+        <ImageButton
+            android:id="@+id/home_BTN_giftStore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/gift_icon"
+            android:background="@null"
+            android:padding="0dp" />
+
+        <!-- LogOut Button -->
+        <ImageButton
+            android:id="@+id/home_BTN_logout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/logout_icon"
+            android:background="@null"
+            android:padding="0dp" />
+    </LinearLayout>
+
+</RelativeLayout>

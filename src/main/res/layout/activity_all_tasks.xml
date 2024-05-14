@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AllGiftsActivity"
+    android:background="@color/white">
+
+
+
+    <ImageButton
+        android:id="@+id/allTasks_BTN_newTask"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/newtask_icon"
+        android:background="@android:color/transparent"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Homepage ImageButton -->
+    <ImageButton
+        android:id="@+id/allTasks_BTN_homePage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/home_icon"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/transparent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/allTasks_TXT_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="All Tasks"
+        android:textSize="30sp"
+        android:fontFamily="@font/dosis"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/allTasks_RCLV_tasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:layout_below="@id/allTasks_TXT_title"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/empty_task_view" />
+
+</RelativeLayout>
